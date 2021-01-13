@@ -1,2 +1,2 @@
 # GUI-Graphics-Programming
-Class repository
+Class repository for Devin Siegfried
