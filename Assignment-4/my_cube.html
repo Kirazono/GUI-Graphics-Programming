@@ -11,7 +11,7 @@
         <script src="my_Small_cube.js"></script>
 
         <!--made my own custom shader id tags-->
-        <script id = "myCube-vertex-shader" type = "x-shader/x-vertex">
+        <script id = "Cube-vertex-shader" type = "x-shader/x-vertex">
         attribute vec4 vPosition;
 
         uniform mat4 MV;
@@ -23,7 +23,7 @@
         }
         </script>
 
-        <script id="myCube-fragment-shader" type="x-shader/x-fragment">
+        <script id="Cube-fragment-shader" type="x-shader/x-fragment">
         void main()
         {
             gl_FragColor = vec4(0.8, 0.2, gl_FrontFacing ? 1.0 : 0.0, 1.0);
