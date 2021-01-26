@@ -1,4 +1,4 @@
-function my_Cube( vertexShaderId, fragmentShaderId)
+function my_Cube(gl, vertexShaderId, fragmentShaderId)
 {
     // initialize with a shader name ID
 
