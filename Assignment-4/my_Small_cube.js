@@ -46,4 +46,3 @@ function render()
 }
 
 window.onload = init;
-alert("bruh");
