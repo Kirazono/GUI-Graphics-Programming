@@ -2,8 +2,8 @@ function my_Cube( vertexShaderId, fragmentShaderId)
 {
     // initialize with a shader name ID
 
-    var myVertShader = vertexShaderId || "myCube-vertex-shader";
-    var myFragShader = fragmentShaderId || "myCube-fragment-shader";
+    var myVertShader = vertexShaderId || "Cube-vertex-shader";
+    var myFragShader = fragmentShaderId || "Cube-fragment-shader";
 
     //the 'program' to start initshader
     this.program = initShaders(gl, myVertShader, myFragShader);
