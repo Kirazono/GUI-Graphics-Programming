@@ -6,7 +6,7 @@ var angle = 0;
 
 function init ()
 {
-    alert("bruh");
+    
     //gotta have the canvas before we start to create anything for the image that is to be displayed
     var canvas = document.getElementById("webgl-canvas");
 
@@ -29,6 +29,7 @@ function init ()
     cube = new my_Cube(gl);
 
     render();
+    alert("bruh");
 }
 
 function render()
