@@ -25,7 +25,7 @@ function init ()
     //what is this for(?)
     gl.enable(gl.DEPTH_TEST);
 
-    cube = new my_Cube();
+    cube = new my_Cube(gl);
 
     render();
 }
