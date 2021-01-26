@@ -29,7 +29,6 @@ function init ()
     cube = new my_Cube(gl);
 
     render();
-    alert("bruh");
 }
 
 function render()
@@ -47,3 +46,4 @@ function render()
 }
 
 window.onload = init;
+alert("bruh");
