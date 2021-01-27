@@ -19,7 +19,7 @@ function my_Cube( vertexShaderId, fragmentShaderId)
 
     this.positions = {
         values : new Float32Array([
-            //add MY own list of vertex positions
+            //sort vertext positions
             -0.5, -0.5, -0.5, //0, A
 
             -0.5, .5, -0.5, //1, B
@@ -42,7 +42,7 @@ function my_Cube( vertexShaderId, fragmentShaderId)
 
     this.indicies = {
         values : new Uint16Array([
-            //add my own set of triangle indicies to be created for each face of the cube
+            //triangle indices per side
             0, 7, 3, 0, 4, 7, //side AEHD
 
             4, 6, 7, 4, 5, 6, //side EFGH
