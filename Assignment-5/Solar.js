@@ -174,7 +174,6 @@ function RenderPlanet(ms, name, moons)
 
 function RenderMoon(ms, name)
 {
-    console.log(name);
     var moon = Planets[name];
     var data = SolarSystem[name];
     moon.PointMode = false;
