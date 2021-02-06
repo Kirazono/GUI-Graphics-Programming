@@ -18,16 +18,16 @@ var gl;
 
 var Planets = {
   Sun : undefined,
-  // Mercury : undefined,
-  // Venus : undefined,
-  // Earth : undefined,
-  // Moon : undefined,
-  // Mars : undefined,
-  // Jupiter : undefined,
-  // Saturn : undefined,
-  // Uranus : undefined,
-  // Neptune : undefined,
-  // Pluto : undefined
+  Mercury : undefined,
+  Venus : undefined,
+  Earth : undefined,
+  Moon : undefined,
+  Mars : undefined,
+  Jupiter : undefined,
+  Saturn : undefined,
+  Uranus : undefined,
+  Neptune : undefined,
+  Pluto : undefined
 };
 
 // Viewing transformation parameters
@@ -115,12 +115,36 @@ function render() {
   // about the planets in SolarSystem.  Look at how these are
   // used; it'll simplify the work you need to do.
 
-  var name, planet, data;
+  var names, planet, data;
 
-  name = "Sun";
-  planet = Planets[name];
-  data = SolarSystem[name];
-  
+for (var names in Planets){
+      name = names;
+      planet = Planets[name];
+      data = SolarSystem[name];
+
+      planet.PointMode = false;
+      ms.push();
+      ms.scale(data.radius);
+      if (name != "Sun" && name != "Moon") {
+          ms.rotate(data.year * time, data.axis);
+          ms.translate(data.distance, 0, 0);
+          if (name == "Earth"){
+            ms.rotate(data.day, data.axis);
+          }
+      }
+
+      gl.useProgram(planet.program);
+      gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+      gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+      gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+      planet.render();
+      if (name != "Sun") {
+        ms.pop();
+      }
+      if (name == "Pluto"){
+        ms.pop();
+      }
+  }
   // Set PointMode to true to render all the vertices as points, as
   // compared to filled triangles.  This can be useful if you think
   // your planet might be inside another planet or the Sun.  Since the
