@@ -103,7 +103,7 @@ function render() {
   // Specify the viewing transformation, and use it to initialize the 
   // matrix stack
 
-  V = translate(5, 5, -0.5*(near + far));
+  V = translate(0.0, 0.0, -0.5*(near + far));
   ms.load(V);  
 
   // Create a few temporary variables to make it simpler to work with
@@ -129,7 +129,7 @@ function render() {
 
   planet.PointMode = false;
 
-  // Use the matrix stack to configure and render a planet.  How you rener
+  // Use the matrix stack to configure and render a planet.  How you render
   // each planet will be similar, but not exactly the same.  In particular,
   // here, we're only rendering the Sun, which is the center of the Solar
   // system (and hence, has no translation to its location).
@@ -155,7 +155,7 @@ function render() {
   ms.push();
   ms.scale(data.radius);
   gl.useProgram(planet.program);
-  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.MV + 1, false, flatten(ms.current()));
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
