@@ -127,7 +127,7 @@ function render() {
   // "planet" variable is set for each object, you will need to set this
   // for each planet separately.
 
-  planet.PointMode = true;
+  planet.PointMode = false;
 
   // Use the matrix stack to configure and render a planet.  How you rener
   // each planet will be similar, but not exactly the same.  In particular,
