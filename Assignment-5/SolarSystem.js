@@ -1,31 +1,26 @@
 var SolarSystem = {
   Sun : {
-    radius : 3,  
+    radius : 10,  
     distance : 0,
     year : 0,
-    axis : [0.0, 1.0, 0.0],
     color : [ 1.0, 1.0, 0.0, 1.0 ]
   },
   Mercury : {
     radius : 0.0553,
     distance : 0.387,
     year : 0.241,
-    axis : [0.0, 1.0, 0.0],
     color : [ 1.0, 0.0, 0.0, 1.0 ]
   },
   Venus : {
     radius : 0.949,
     distance : 0.723,
     year : 0.615,
-    axis : [0.0, 1.0, 0.0],
     color : [ 1.0, 0.0, 1.0, 1.0 ]
   },
   Earth : {
-    radius : 1,
-    distance : 1,
+    radius : 0.25,
+    distance : 3,
     year : 1,
-    day : 1,
-    axis : [0.0, 1.0, 0.0],
     color : [ 0.0, 0.0, 1.0, 1.0 ]
   },
   Moon : {
@@ -43,14 +38,14 @@ var SolarSystem = {
     color : [ 1.0, 0.0, 0.0, 1.0 ]
   },
   Jupiter : {
-    radius : 11.21,
+    radius : 0.75,
     distance : 5.20,
     year : 11.9,
     axis : [0.0, 1.0, 0.0],
     color : [ 1.0, 153/255, 0.0, 1.0 ]
   },
   Saturn : {
-    radius : 9.45,
+    radius : 0.5,
     distance : 9.58,
     year : 29.4,
     axis : [0.0, 1.0, 0.0],
