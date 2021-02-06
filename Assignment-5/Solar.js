@@ -141,8 +141,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
-
   //
   //  Add your code for more planets here!
   //
@@ -160,7 +158,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -169,13 +166,15 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(year, axis);
+  ms.translate(distance, 0, 0);
+  ms.rotate(day, axis);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -190,7 +189,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -205,7 +203,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -220,7 +217,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -235,7 +231,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -250,7 +245,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -265,7 +259,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
@@ -280,7 +273,6 @@ function render() {
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
-  ms.pop();
   //
   
    //
