@@ -150,6 +150,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+    planet.PointMode = false;
+  
   ms.push();
   ms.scale(data.radius);
   ms.rotate();
@@ -165,6 +167,8 @@ function render() {
   name = "Venus";
   planet = Planets[name];
   data = SolarSystem[name];
+  
+    planet.PointMode = false;
   
   ms.push();
   ms.rotate(year, axis);
@@ -183,6 +187,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+    planet.PointMode = false;
+  
   ms.push();
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -196,6 +202,8 @@ function render() {
   name = "Moon";
   planet = Planets[name];
   data = SolarSystem[name];
+  
+    planet.PointMode = false;
   
   ms.push();
   ms.scale(data.radius);
@@ -211,6 +219,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+    planet.PointMode = false;
+  
   ms.push();
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -224,6 +234,8 @@ function render() {
   name = "Jupiter";
   planet = Planets[name];
   data = SolarSystem[name];
+  
+    planet.PointMode = false;
   
   ms.push();
   ms.scale(data.radius);
@@ -239,6 +251,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+    planet.PointMode = false;
+  
   ms.push();
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -252,6 +266,8 @@ function render() {
   name = "Uranus";
   planet = Planets[name];
   data = SolarSystem[name];
+  
+    planet.PointMode = false;
   
   ms.push();
   ms.scale(data.radius);
@@ -267,6 +283,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+    planet.PointMode = false;
+  
   ms.push();
   ms.scale(data.radius);
   gl.useProgram(planet.program);
@@ -280,6 +298,8 @@ function render() {
   name = "Pluto";
   planet = Planets[name];
   data = SolarSystem[name];
+  
+    planet.PointMode = false;
   
   ms.push();
   ms.scale(data.radius);
