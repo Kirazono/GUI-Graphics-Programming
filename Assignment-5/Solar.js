@@ -167,9 +167,9 @@ function resize() {
   var w = canvas.clientWidth;
   var h = canvas.clientHeight;
 
-  gl.viewport(1920, 1080, w, h);
+  gl.viewport(0, 0, w, h);
 
-  var fovy = 20.0; // degrees
+  var fovy = 95.0; // degrees
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
