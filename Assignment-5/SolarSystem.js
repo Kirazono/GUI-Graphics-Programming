@@ -43,20 +43,20 @@ var SolarSystem = {
   },
   Saturn : {
     radius : 0.5,
-    distance : 9.58,
+    distance : 1,
     year : 29.4,
     color : [ 1.0, 1.0, 0.0, 1.0 ]
   },
   Uranus : {
     radius : 4.01,
     distance : 19.20,
-    year : 83.7,
+    year : 1.5,
     color : [ 0.0, 0.1, 1.0, 1.0 ]
   },
   Neptune : {
     radius : 3.88,
     distance : 30.05,
-    year : 163.7,
+    year : 2,
     color : [ 0.0, 0.0, 1.0, 1.0 ]
   },
   Pluto : {
