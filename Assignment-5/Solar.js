@@ -147,10 +147,10 @@ function render() {
   MakePlanet(ms, "Venus", ["Moon"]);
   MakePlanet(ms, "Earth", ["Moon"]);
   MakePlanet(ms, "Mars", ["Moon"]);
-  MakePlanet(ms, "Saturn", ["Moon"]);
+  MakePlanet(ms, "Saturn", ["Moon"],  ["Moon"], ["Moon"]);
   MakePlanet(ms, "Jupiter", ["Moon"]);
-  MakePlanet(ms, "Neptune", ["Moon"]);
-  MakePlanet(ms, "Pluto", ["Moon"]);
+  MakePlanet(ms, "Neptune");
+  MakePlanet(ms, "Pluto", ["Moon"],  ["Moon"], ["Moon"],  ["Moon"], ["Moon"]);
   MakePlanet(ms, "Uranus", ["Moon"]);
     
   ms.pop();
