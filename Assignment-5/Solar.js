@@ -202,7 +202,6 @@ function RenderMoon(ms, name)
     console.log(name);
     var moon = Planets[name];
     var data = SolarSystem[name];
-    moon.PointMode = false;
     
     // Up the scope.
     ms.push();
