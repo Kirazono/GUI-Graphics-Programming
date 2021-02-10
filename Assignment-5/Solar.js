@@ -143,7 +143,7 @@ function render() {
   //  Add your code for more planets here!
   //
 
-  RenderPlanet(ms, "Earth", ["Moon"]);
+  RenderPlanet(ms, "Earth", "Mercury", "Venus","Mars","Jupiter","Saturn","Uranus","Neptune","Pluto", ["Moon"]);
     
   ms.pop();
     
