@@ -62,7 +62,7 @@ var SolarSystem = {
   Pluto : {
     radius : 0.186,
     distance : 39.48,
-    year : 247.9,
+    year : 8000,
     color : [ 150/255, 75/255, 0.0, 1.0 ]
   }
 };
