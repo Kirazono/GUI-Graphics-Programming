@@ -143,15 +143,15 @@ function render() {
   //  Add your code for more planets here!
   //
 
-  MakePlanet(ms, "Mercury", ["Moon"], ["Moon"]);
-  MakePlanet(ms, "Venus", ["Moon"]);
+  MakePlanet(ms, "Mercury");
+  MakePlanet(ms, "Venus");
   MakePlanet(ms, "Earth", ["Moon"]);
-  MakePlanet(ms, "Mars", ["Moon"]);
-  MakePlanet(ms, "Saturn", ["Moon"],  ["Moon"], ["Moon"]);
+  MakePlanet(ms, "Mars");
+  MakePlanet(ms, "Saturn");
   MakePlanet(ms, "Jupiter", ["Moon"]);
   MakePlanet(ms, "Neptune");
-  MakePlanet(ms, "Pluto", ["Moon"],  ["Moon"], ["Moon"],  ["Moon"], ["Moon"]);
-  MakePlanet(ms, "Uranus", ["Moon"]);
+  MakePlanet(ms, "Pluto", ["Moon"]);
+  MakePlanet(ms, "Uranus");
     
   ms.pop();
     
