@@ -143,7 +143,7 @@ function render() {
   //  Add your code for more planets here!
   //
 
-  MakePlanet(ms, "Mercury", ["Moon"]);
+  MakePlanet(ms, "Mercury", ["Moon"], ["Moon"]);
   MakePlanet(ms, "Venus", ["Moon"]);
   MakePlanet(ms, "Earth", ["Moon"]);
   MakePlanet(ms, "Mars", ["Moon"]);
