@@ -143,15 +143,15 @@ function render() {
   //  Add your code for more planets here!
   //
 
-  RenderPlanet(ms, "Mercury", ["Moon"]);
-  RenderPlanet(ms, "Venus", ["Moon"]);
-  RenderPlanet(ms, "Earth", ["Moon"]);
-  RenderPlanet(ms, "Mars", ["Moon"]);
-  RenderPlanet(ms, "Saturn", ["Moon"]);
-  RenderPlanet(ms, "Jupiter", ["Moon"]);
-  RenderPlanet(ms, "Neptune", ["Moon"]);
-  RenderPlanet(ms, "Pluto", ["Moon"]);
-  RenderPlanet(ms, "Uranus", ["Moon"]);
+  MakePlanet(ms, "Mercury", ["Moon"]);
+  MakePlanet(ms, "Venus", ["Moon"]);
+  MakePlanet(ms, "Earth", ["Moon"]);
+  MakePlanet(ms, "Mars", ["Moon"]);
+  MakePlanet(ms, "Saturn", ["Moon"]);
+  MakePlanet(ms, "Jupiter", ["Moon"]);
+  MakePlanet(ms, "Neptune", ["Moon"]);
+  MakePlanet(ms, "Pluto", ["Moon"]);
+  MakePlanet(ms, "Uranus", ["Moon"]);
     
   ms.pop();
     
@@ -175,7 +175,7 @@ function resize() {
   P = perspective(fovy, aspect, near, far);
 }
 
-function RenderPlanet(ms, name, moons)
+function MakePlanet(ms, name, moons)
 {
     var planet = Planets[name];
     var data = SolarSystem[name];
@@ -198,14 +198,14 @@ function RenderPlanet(ms, name, moons)
     
     for(var i = 0; i < moons.length; i++)
     {
-        RenderMoon(ms, moons[i]);
+        MakeMoon(ms, moons[i]);
     }
     
     // Drop the scope.
     ms.pop();
 }
 
-function RenderMoon(ms, name)
+function MakeMoon(ms, name)
 {
     console.log(name);
     var moon = Planets[name];
