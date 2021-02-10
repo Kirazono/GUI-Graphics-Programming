@@ -185,7 +185,7 @@ function RenderPlanet(ms, name, moons)
     ms.push();
     
     // Actual matrix stuff
-    ms.rotate((1.0 / data.year) * time, [0.8, 1.0, 0.5]);
+    ms.rotate((1.0 / data.year) * time, [1.0, 1.0, 1.0]);
     ms.translate(data.distance, 0, 0);
     ms.scale(data.radius);
     
@@ -215,7 +215,7 @@ function RenderMoon(ms, name)
     ms.push();
     
     // Actual matrix stuff
-    ms.rotate((1.0 / data.year) * time, [0.8, 1.0, 0.5]);
+    ms.rotate((1.0 / data.year) * time, [1.0, 1.0, 1.0]);
     ms.translate(data.distance, 0, 0);
     ms.scale(data.radius);
     
