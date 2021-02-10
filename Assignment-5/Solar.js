@@ -36,7 +36,7 @@ var V;  // matrix storing the viewing transformation
 // Projection transformation parameters
 var P;  // matrix storing the projection transformation
 var near = 10;      // near clipping plane's distance
-var far = 120;      // far clipping plane's distance
+var far = 11111111;      // far clipping plane's distance
 
 // Animation variables
 var time = 0.0;      // time, our global time constant, which is 
@@ -169,7 +169,7 @@ function resize() {
 
   gl.viewport(0, 0, w, h);
 
-  var fovy = 95.0; // degrees
+  var fovy = 120.0; // degrees
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
