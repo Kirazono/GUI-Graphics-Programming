@@ -18,16 +18,16 @@ var gl;
 
 var Planets = {
   Sun : undefined,
-  // Mercury : undefined,
-  // Venus : undefined,
-  // Earth : undefined,
-  // Moon : undefined,
-  // Mars : undefined,
-  // Jupiter : undefined,
-  // Saturn : undefined,
-  // Uranus : undefined,
-  // Neptune : undefined,
-  // Pluto : undefined
+  Mercury : undefined,
+  Venus : undefined,
+  Earth : undefined,
+  Moon : undefined,
+  Mars : undefined,
+  Jupiter : undefined,
+  Saturn : undefined,
+  Uranus : undefined,
+  Neptune : undefined,
+  Pluto : undefined
 };
 
 // Viewing transformation parameters
@@ -115,11 +115,8 @@ function render() {
   // about the planets in SolarSystem.  Look at how these are
   // used; it'll simplify the work you need to do.
 
-  var name, planet, data;
-
-  name = "Sun";
-  planet = Planets[name];
-  data = SolarSystem[name];
+  var sun = Planets["Sun"];
+  var data = SolarSystem["Sun"];
   
   // Set PointMode to true to render all the vertices as points, as
   // compared to filled triangles.  This can be useful if you think
@@ -127,7 +124,7 @@ function render() {
   // "planet" variable is set for each object, you will need to set this
   // for each planet separately.
 
-  planet.PointMode = false;
+  sun.PointMode = false;
 
   // Use the matrix stack to configure and render a planet.  How you rener
   // each planet will be similar, but not exactly the same.  In particular,
@@ -135,18 +132,21 @@ function render() {
   // system (and hence, has no translation to its location).
 
   ms.push();
-  ms.scale(data.radius);
-  gl.useProgram(planet.program);
-  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
-  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
-  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
-  planet.render();
-  ms.pop();
+    ms.scale(data.radius);
+    gl.useProgram(sun.program);
+    gl.uniformMatrix4fv(sun.uniforms.MV, false, flatten(ms.current()));
+    gl.uniformMatrix4fv(sun.uniforms.P, false, flatten(P));
+    gl.uniform4fv(sun.uniforms.color, flatten(data.color));
+    sun.render();
 
   //
   //  Add your code for more planets here!
   //
 
+  RenderPlanet(ms, "Earth", ["Moon"]);
+    
+  ms.pop();
+    
   window.requestAnimationFrame(render);
 }
 
@@ -165,6 +165,62 @@ function resize() {
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
+}
+
+function RenderPlanet(ms, name, moons)
+{
+    var planet = Planets[name];
+    var data = SolarSystem[name];
+    planet.PointMode = false;
+    
+    // Up the scope.
+    ms.push();
+    
+    // Actual matrix stuff
+    ms.rotate((1.0 / data.year) * time, [0.0, 1.0, 0.0]);
+    ms.translate(data.distance, 0, 0);
+    ms.scale(data.radius);
+    
+    // Rendering stuff
+    gl.useProgram(planet.program);
+    gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+    gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+    gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+    planet.render();
+    
+    for(var i = 0; i < moons.length; i++)
+    {
+        RenderMoon(ms, moons[i]);
+    }
+    
+    // Drop the scope.
+    ms.pop();
+}
+
+function RenderMoon(ms, name)
+{
+    console.log(name);
+    var moon = Planets[name];
+    var data = SolarSystem[name];
+    moon.PointMode = false;
+    
+    // Up the scope.
+    ms.push();
+    
+    // Actual matrix stuff
+    ms.rotate((1.0 / data.year) * time, [0.0, 1.0, 0.0]);
+    ms.translate(data.distance, 0, 0);
+    ms.scale(data.radius);
+    
+    // Rendering stuff
+    gl.useProgram(moon.program);
+    gl.uniformMatrix4fv(moon.uniforms.MV, false, flatten(ms.current()));
+    gl.uniformMatrix4fv(moon.uniforms.P, false, flatten(P));
+    gl.uniform4fv(moon.uniforms.color, flatten(data.color));
+    moon.render();
+    
+    // Drop the scope.
+    ms.pop();
 }
 
 //---------------------------------------------------------------------------
