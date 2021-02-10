@@ -130,18 +130,6 @@ function render()
 //  resize() - handle resize events
 //
 
-function resize() {
-  var w = canvas.clientWidth;
-  var h = canvas.clientHeight;
-
-  gl.viewport(0, 0, w, h);
-
-  var fovy = 100.0; // degrees
-  var aspect = w / h;
-
-  P = perspective(fovy, aspect, near, far);
-}
-
 function RenderPlanet(ms, name, moons)
 {
     var planet = Planets[name];
@@ -174,6 +162,7 @@ function RenderPlanet(ms, name, moons)
 
 function RenderMoon(ms, name)
 {
+    console.log(name);
     var moon = Planets[name];
     var data = SolarSystem[name];
     moon.PointMode = false;
