@@ -8,13 +8,19 @@
         <script src="../Common/initShaders.js"></script>
         <script src="../Common/MV.js"></script>
         <script src="../Common/my_Cube.js"></script>
-        <script src="my_Small_cube.js"></script>
+        <script src="my_Textured_cube.js"></script>
 
         <!--made my own custom shader id tags-->
         <script id = "myCube-vertex-shader" type = "x-shader/x-vertex">
         attribute vec4 vPosition;
+        
+        attribute vec2 aTexCoord;
 
         uniform mat4 MV;
+        
+        varying vec2 vTexCoord;
+        
+       
 
         void main()
         {
@@ -24,6 +30,10 @@
         </script>
 
         <script id="myCube-fragment-shader" type="x-shader/x-fragment">
+        
+        varying vec2 vTexCoord;
+        
+         uniform sampler2D uTtexture;
         void main()
         {
             gl_FragColor = vec4(0.8, 0.2, gl_FrontFacing ? 1.0 : 0.0, 1.0);
