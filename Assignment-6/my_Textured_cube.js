@@ -4,7 +4,7 @@ function main() {
   // Get A WebGL context
   /** @type {HTMLCanvasElement} */
   var canvas = document.querySelector("#canvas");
-  var gl = canvas.getContext("webgl");
+  var gl = canvas.getContext("webgl-utils");
   if (!gl) {
     return;
   }
