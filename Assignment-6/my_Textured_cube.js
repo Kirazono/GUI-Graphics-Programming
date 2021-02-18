@@ -134,7 +134,7 @@ function Cube(gl, size, vertexShaderId, fragmentShaderId)
 	gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0, 255, 0, 255]));
 	
 	var img = new Image();
-	img.src = "https://i.ibb.co/hKjhbqQ/cube-texture.png"
+	img.src = "https://i.imgur.com/h8gQnmI.png"
 	img.crossOrigin = "anonymous"
 	
 	img.onload = function() 
