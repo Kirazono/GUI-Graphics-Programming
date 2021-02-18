@@ -15,46 +15,46 @@ function Cube(gl, size, vertexShaderId, fragmentShaderId)
         return; 
     }
 	
-	//Makes the size work.
-	size = size / 2;
+	//Fits the cube in the frame.
+	girth = girth / 2;
 	
     this.positions = { 
         values : new Float32Array([
 			// Front face
-			-size, -size,  size,
-			 size, -size,  size,
-			 size,  size,  size,
-			-size,  size,  size,
+			-girth, -girth,  girth,
+			 girth, -girth,  girth,
+			 girth,  girth,  girth,
+			-girth,  girth,  girth,
 
 			// Back face
-			-size, -size, -size,
-			-size,  size, -size,
-			 size,  size, -size,
-			 size, -size, -size,
+			-girth, -girth, -girth,
+			-girth,  girth, -girth,
+			 girth,  girth, -girth,
+			 girth, -girth, -girth,
 
 			// Top face
-			-size,  size, -size,
-			-size,  size,  size,
-			 size,  size,  size,
-			 size,  size, -size,
+			-girth,  girth, -girth,
+			-girth,  girth,  girth,
+			 girth,  girth,  girth,
+			 girth,  girth, -girth,
 
 			// Bottom face
-			-size, -size, -size,
-			 size, -size, -size,
-			 size, -size,  size,
-			-size, -size,  size,
+			-girth, -girth, -girth,
+			 girth, -girth, -girth,
+			 girth, -girth,  girth,
+			-girth, -girth,  girth,
 
 			// Right face
-			 size, -size, -size,
-			 size,  size, -size,
-			 size,  size,  size,
-			 size, -size,  size,
+			 girth, -girth, -girth,
+			 girth,  girth, -girth,
+			 girth,  girth,  girth,
+			 girth, -girth,  girth,
 
 			// Left face
-			-size, -size, -size,
-			-size, -size,  size,
-			-size,  size,  size,
-			-size,  size, -size,
+			-girth, -girth, -girth,
+			-girth, -girth,  girth,
+			-girth,  girth,  girth,
+			-girth,  girth, -girth,
 		]),
         numComponents : 3
     };
