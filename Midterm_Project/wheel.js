@@ -45,8 +45,7 @@ var Planets = {
   spokeRoundThirteen: undefined,
   spokeRoundFourteen: undefined,
   spokeRoundFifteen: undefined,
-  spokeRoundSixteen: undefined,
-
+  spokeRoundSixteen: undefined
 };
 
 // Viewing transformation parameters
