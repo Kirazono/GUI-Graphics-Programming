@@ -29,7 +29,24 @@ var Planets = {
   spokeThreeThree : undefined,
   spokeFourOne : undefined,
   spokeFourTwo : undefined,
-  spokeFourThree: undefined
+  spokeFourThree: undefined,
+  spokeRoundOne: undefined,
+  spokeRoundTwo: undefined,
+  spokeRoundThree: undefined,
+  spokeRoundFour: undefined,
+  spokeRoundFive: undefined,
+  spokeRoundSix: undefined,
+  spokeRoundSeven: undefined,
+  spokeRoundEight: undefined,
+  spokeRoundNine: undefined,
+  spokeRoundTen: undefined,
+  spokeRoundEleven: undefined,
+  spokeRoundTwelve: undefined,
+  spokeRoundThirteen: undefined,
+  spokeRoundFourteen: undefined,
+  spokeRoundFifteen: undefined,
+  spokeRoundSixteen: undefined,
+
 };
 
 // Viewing transformation parameters
@@ -345,6 +362,278 @@ function render() {
   ms.pop();
 
   name = "spokeFourThree";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundOne";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundTwo";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundThree";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundFour";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundFive";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundSix";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundSeven";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  name = "spokeRoundEight";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  name = "spokeRoundNine";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  name = "spokeRoundTen";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  name = "spokeRoundEleven";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  name = "spokeRoundTwelve";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundThirteen";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundFourteen";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  name = "spokeRoundFifteen";
+  planet = Planets[name];
+  data = SolarSystem[name];
+
+  planet.PointMode = false;
+
+  ms.push();
+  ms.rotate(data.year * time, data.axis);
+  ms.translate(data.distance - 10.5, -11, 0);
+  ms.scale(data.radius);
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+
+  name = "spokeRoundSixteen";
   planet = Planets[name];
   data = SolarSystem[name];
 
