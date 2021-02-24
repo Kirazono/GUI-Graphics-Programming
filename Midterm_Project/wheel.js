@@ -487,7 +487,7 @@ function render() {
 
   ms.push();
   ms.rotate(data.year * time, data.axis);
-  ms.translate(data.distance 2.5, -11, 0);
+  ms.translate(data.distance + 2.5, -11, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -504,7 +504,7 @@ function render() {
 
   ms.push();
   ms.rotate(data.year * time, data.axis);
-  ms.translate(data.distance 6.5, -11, 0);
+  ms.translate(data.distance + 6.5, -11, 0);
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
