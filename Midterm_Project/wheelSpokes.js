@@ -88,5 +88,117 @@ var SolarSystem = {
     year : 2,
 	axis : [0.0, 0.0, 1.0],
     color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundOne : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundTwo : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundThree : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundFour : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundFive : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundSix : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundSeven : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundEight : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundNine : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundTen : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundEleven : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundTwelve : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundThirteen : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundFourteen : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundFifteen : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
+  },
+	spokeRoundSixteen : {
+    radius : 2,
+    distance : 11,
+    year : 2,
+	axis : [0.0, 0.0, 1.0],
+    color : [ 0.5, 0.5, 0.5, 1.0 ]
   }
 };
